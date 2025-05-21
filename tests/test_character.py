@@ -6,11 +6,7 @@ from character import Character
 
 def test_character_initial_hp():
     c = Character()
-<<<<<<< HEAD
-    assert c.hp == 10
-=======
     assert c.hp == 1000
->>>>>>> fa8202c (test failes)
 
 def test_character_death():
     c = Character()
