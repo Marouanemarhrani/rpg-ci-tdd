@@ -1,7 +1,7 @@
 class Character:
     def __init__(self, name=""):
         self.name = name
-        self.hp = 100
+        self.hp = 10
 
     def is_dead(self):
         return self.hp <= 0
