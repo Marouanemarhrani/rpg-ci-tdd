@@ -31,3 +31,12 @@ def test_character_cannot_overheal():
     c.heal()
     assert c.hp == 10
 
+def test_character_dies_after_multiple_attacks():
+    attacker = Character()
+    target = Character()
+
+    for _ in range(10):
+        attacker.attack(target)
+
+    assert target.hp == 0
+    assert target.is_dead()
