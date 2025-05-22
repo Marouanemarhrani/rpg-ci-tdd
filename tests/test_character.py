@@ -40,3 +40,14 @@ def test_character_dies_after_multiple_attacks():
 
     assert target.hp == 0
     assert target.is_dead()
+
+def test_character_fight_until_death():
+    attacker = Character()
+    defender = Character()
+
+    # Attaquer jusqu'à ce que le défenseur soit mort
+    while not defender.is_dead():
+        attacker.attack(defender)
+
+    assert defender.hp <= 0
+    assert defender.is_dead() is True
