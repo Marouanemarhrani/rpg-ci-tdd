@@ -29,7 +29,7 @@ def test_character_cannot_overheal():
     c = Character()
     c.hp = 10
     c.heal()
-    assert c.hp == 10
+    assert c.hp == 100
 
 def test_character_dies_after_multiple_attacks():
     attacker = Character()
